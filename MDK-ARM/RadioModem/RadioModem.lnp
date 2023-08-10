@@ -1,0 +1,17 @@
+--cpu Cortex-M3
+"radiomodem\startup_stm32f103xb.o"
+"radiomodem\main.o"
+"radiomodem\stm32f1xx_it.o"
+"radiomodem\stm32f1xx_ll_gpio.o"
+"radiomodem\stm32f1xx_ll_pwr.o"
+"radiomodem\stm32f1xx_ll_exti.o"
+"radiomodem\stm32f1xx_ll_tim.o"
+"radiomodem\stm32f1xx_ll_dma.o"
+"radiomodem\stm32f1xx_ll_rcc.o"
+"radiomodem\stm32f1xx_ll_utils.o"
+"radiomodem\stm32f1xx_ll_usart.o"
+"radiomodem\system_stm32f1xx.o"
+--strict --scatter "RadioModem\RadioModem.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "RadioModem.map" -o RadioModem\RadioModem.axf
